@@ -3,6 +3,16 @@
   src: url(MyFirstFont.otf);
 }
 
+@font-face {
+  font-family: GreatVibes;
+  src: url(GreatVibes-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(Montserrat-Regular.otf);
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -17,6 +27,20 @@ header {
 .container {
   width: 75%;
   margin: 0 auto;
+}
+
+.input_search {
+  width: 150px;
+  height: 22px;
+  font-size: 12px;
+  background-color: whitesmoke;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.search_button {
+  cursor: pointer;
+  border: none;
 }
 
 .connections .container {
@@ -92,6 +116,12 @@ header nav ul li a {
 .header_navigation {
   display: flex;
   justify-content: space-around;
+  background-color: whitesmoke;
+}
+
+.text_of_first_div {
+  display: flex;
+  flex-direction: column;
 }
 
 .div_img_text {
@@ -119,6 +149,8 @@ header nav ul li a {
 #first-div:hover .span_on_image {
   transition: all .7s ease-in-out;
   opacity: 1;
+  color: white;
+  font-family: Lato-font;
 }
 
 #first-div {
@@ -128,6 +160,13 @@ header nav ul li a {
 
 .image_fit {
   transition: .7s;
+}
+
+.text_on_image {
+  font-size: 12px;
+  font-weight: bold;
+  width: 45px;
+  border-bottom: 2px solid white;
 }
 
 .flex_text_column:hover .image_fit {
@@ -255,34 +294,84 @@ section {
   top: 0;
   bottom: 0;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
 }
+
+.text_on_image {
+  margin-bottom: 15px;
+  margin-left: 100px;
+  font-size: 12px;
+}
+
+.second_text_on_image {
+  padding-bottom: 15px;
+  margin-left: 100px;
+  font-size: 30px;
+}
+
+.third_text_on_image {
+  margin-left: 100px;
+}
+
+.font_on_image_two {
+  font-family: Montserrat-Regular;
+}
+
+
 
 @media screen and (max-width: 768px) {
 
   .input_search, .button_search {
     display: none;
   }
+
   .first_row {
     flex-direction: column;
   }
-  .second_row {
-    flex-direction: column;
-  }
+
+
+
   .social_media_icons {
     display: none;
   }
+
  .header_navigation {
    width: 70%;
  }
+
 }
 
 @media screen and (max-width: 1200px) {
   #image_container {
     flex-direction: column;
   }
+
+  #first-div {
+    width: 100%;
+    
+  }
+
+  .flex .text_column {
+    padding: 40px;
+  }
+
+  .second-div {
+    width: 100%;
+  }
+
+  .header_navigation {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
   .header_navigation {
     width: 75%;
   }
+
   .container {
     display: flex;
     flex-direction: column;
